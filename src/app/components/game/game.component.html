@@ -1,0 +1,19 @@
+
+<p>Give me your name:</p>
+<input type="text" #name>
+<button (click)="sayHello(name.value)">OK</button>
+{{messageForUser}}
+
+<br><br>
+<p>GBP to PLN</p>
+<p>1GBP = {{rootObject.rates.PLN.toPrecision(11)}}PLN</p>
+
+<br><br>
+<p>GBP to CHF</p>
+<p>1GBP = {{rootObject.rates.CHF.toPrecision(3)}}CHF</p>
+
+<br><br>
+<p>Enter the value of GBP in PLN:</p>
+<input type="text" #currency>
+<button (click)="check(currency.value)">CHECK!</button>
+{{result}}
